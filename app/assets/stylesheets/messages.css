@@ -1,0 +1,72 @@
+.wrapper {
+  display: flex;
+}
+
+.side-bar{
+  background-color: #253141;
+  width: 300px;
+  height: 100vh;
+}
+
+.side-bar-header{
+  height: 100px;
+  padding: 0 20px;
+  background-color: #253141;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-name a{  /*a要素のTomを呼び出す*/
+  font-size: 16px;
+  color: #FAFAFA;
+  text-decoration: none;  /*文字のアンダーラインを消す役割 */
+}
+
+.create-room a{  /*a要素のチャット作成を呼び出す*/
+  font-size: 16px;
+  font-size: 10px;
+  color: deepskyblue;
+  padding: 14px;
+  border: 1px solid lightblue;
+  text-decoration: none;  /*文字のアンダーラインを消す役割 */
+}
+
+.rooms{
+  height: calc( 100vh - 100px );
+  background-color: #2F3E51;
+  padding: 0 20px;
+  overflow: scroll; /*overflow: scrollを使用することでスクロール機能の実装可能*/
+}
+
+.room{
+  padding: 20px 20px 40px;
+}
+
+.room-name a{
+  text-decoration: none;
+  color: white;
+}
+
+.chat{
+  background-color: #FFFFFF;
+  width: calc(100vw - 300px);
+}
+
+.chat-header{
+  height: 100px;
+  padding: 0 40px;
+}
+
+.messages{
+  height: calc(100vh - 100px - 90px );
+  background-color: #FAFAFA;
+  padding: 46px 40px 0;
+
+}
+
+.form{
+  height: 90px;
+  background-color: #DDDDDD;
+  padding: 20px 40px;
+}

@@ -1,6 +1,10 @@
 <div class="wrapper">
-  <%# renderメソッドとはレスポンスの出力をしてくれるメソッド %>
-  <%= render "side_bar" %>
-  <%= render "main_chat" %>
-  <%# 部分テンプレートの読み込みなので、ファイル名先頭の「_」や拡張子は必要ない %>
+  <div class="side-bar">
+    <%= render "side_bar" %>
+    <%# renderメソッドとはレスポンスの出力をしてくれる & _と拡張子除いた形で呼び出す%>
+  </div>
+  <div class="chat">
+    <%= render "main_chat" %>
+    <%# _と拡張子除いた形で呼び出す %>
+  </div>
 </div>
