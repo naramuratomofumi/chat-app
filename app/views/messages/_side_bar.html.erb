@@ -5,16 +5,20 @@
   </div>
   <div class="create-room">
     <%# チャットを作成するを押すとチャットルーム作成ページに飛ばしたいのでa hrefを使用 %>
-    <a href="#">チャットを作成する</a>
+    <%= link_to "チャットを作成する", new_room_path %>
   </div>
 </div>
 
 <div class="rooms">
-  <div class="room">
-    <div class="room-name">
-      <a href="#">techroom1</a>
+  <% current_user.rooms.each do |room|%>
+                   <%# 「eachメソッド」を使って全てのチャットルームに対して同じ処理を繰り返し実行 %>
+    <div class="room">
+      <div class="room-name">
+        <a href="#"><%= room.name %></a>
+                    <%# room.nameの「name」は、roomsテーブルのカラム名 %>
+      </div>
     </div>
-  </div>
+  <% end %>
   <div class="room">
     <div class="room-name">
       <a href="#">techroom2</a>
