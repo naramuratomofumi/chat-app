@@ -1,7 +1,7 @@
 <div class="side-bar-header">
   <div class="header-name">
-    <%# Tomを押すとユーザー情報ページに飛ばしたいのでa hrefを使用 %>
-    <a href="#">Tom</a>
+    <%# link_toのパスを、ログインしているユーザーの編集をするため、edit_user_path(current_user)と指定。current_user.nameは、ログインしているユーザー名。ユーザー名をクリックすると、usersコントローラーのeditアクションが実行され、編集ページに遷移できる。 %>
+    <%= link_to current_user.name, edit_user_path(current_user) %>
   </div>
   <div class="create-room">
     <%# チャットを作成するを押すとチャットルーム作成ページに飛ばしたいのでa hrefを使用 %>
