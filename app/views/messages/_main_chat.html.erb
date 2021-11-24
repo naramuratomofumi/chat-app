@@ -6,8 +6,8 @@
   </div>
   <div class="right-header">
     <div class="header-button">
-      <%# チャットを終了するを押すとユーザー情報ページに飛ばしたいのでa hrefを使用 %>
-      <a href="#">チャットを終了する</a>
+      <%# "チャットを終了する"をクリックすると、チャットルームが削除されるようにリンクを設定 %>
+      <%= link_to "チャットを終了する", room_path(@room), method: :delete %>
     </div>
   </div>
 </div>
