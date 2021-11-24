@@ -14,7 +14,7 @@
                    <%# 「eachメソッド」を使って全てのチャットルームに対して同じ処理を繰り返し実行 %>
     <div class="room">
       <div class="room-name">
-        <a href="#"><%= room.name %></a>
+        <%= link_to room.name, room_messages_path(room) %>
                     <%# room.nameの「name」は、roomsテーブルのカラム名 %>
       </div>
     </div>
